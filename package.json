@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/cardgenerator",
+  "version": "1.0.0",
+  "description": "Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/cardgenerator-API.git"
+  },
+  "keywords": [
+    "card generator"," card generator api"," card generator tool"," card generator software"," card generator service"," card generator library"," card generator sdk"," card generator code"," card generator script"," card generator program"," card generator application"," card generator app"," card generator utility"," card generator helper"," card generator helper tool"," card generator helper software"," card generator helper service"," card generator helper library"," card generator helper sdk"," card generator helper code"," card generator helper script"," card generator helper program"," card generator helper application"," card generator helper app"," card generator helper tool"," card generator helper utility"," card generator helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/cardgenerator-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/cardgenerator-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
