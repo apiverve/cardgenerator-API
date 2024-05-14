@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/cardgenerator-API.git"
   },
   "keywords": [
-    "card generator"," card generator api"," card generator tool"," card generator software"," card generator service"," card generator library"," card generator sdk"," card generator code"," card generator script"," card generator program"," card generator application"," card generator app"," card generator utility"," card generator helper"," card generator helper tool"," card generator helper software"," card generator helper service"," card generator helper library"," card generator helper sdk"," card generator helper code"," card generator helper script"," card generator helper program"," card generator helper application"," card generator helper app"," card generator helper tool"," card generator helper utility"," card generator helper"
+    "card generator","card generator api","card generator tool","card generator software","card generator service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
