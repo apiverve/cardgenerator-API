@@ -5,6 +5,7 @@ Card Generator is a simple tool for generating test/sample card numbers. It retu
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
+![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
 This is a Javascript Wrapper for the [Card Generator API](https://apiverve.com/marketplace/api/cardgenerator)
 
@@ -143,7 +144,7 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the mailboxlayer website, API, and services is subject to the [APIVerve Terms & Conditions](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the mailboxlayer website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
 
 ---
 
