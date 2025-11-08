@@ -1,5 +1,4 @@
-Card Generator API
-============
+# Card Generator API
 
 Card Generator is a simple tool for generating test/sample card numbers. It returns a list of card numbers for testing.
 
@@ -7,55 +6,63 @@ Card Generator is a simple tool for generating test/sample card numbers. It retu
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Card Generator API](https://apiverve.com/marketplace/api/cardgenerator)
+This is a Javascript Wrapper for the [Card Generator API](https://apiverve.com/marketplace/cardgenerator)
 
 ---
 
 ## Installation
-	npm install @apiverve/cardgenerator --save
+
+Using npm:
+```shell
+npm install @apiverve/cardgenerator
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/cardgenerator
+```
 
 ---
 
 ## Configuration
 
-Before using the cardgenerator API client, you have to setup your account and obtain your API Key.  
+Before using the Card Generator API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Card Generator API documentation is found here: [https://docs.apiverve.com/api/cardgenerator](https://docs.apiverve.com/api/cardgenerator).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Card Generator API documentation is found here: [https://docs.apiverve.com/ref/cardgenerator](https://docs.apiverve.com/ref/cardgenerator).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var cardgeneratorAPI = require('@apiverve/cardgenerator');
-var api = new cardgeneratorAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const cardgeneratorAPI = require('@apiverve/cardgenerator');
+const api = new cardgeneratorAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   brand: "visa",
   count: 5
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -65,9 +72,54 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  brand: "visa",
+  count: 5
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  brand: "visa",
+  count: 5
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -76,57 +128,81 @@ api.execute(query, function (error, data) {
     "count": 5,
     "cards": [
       {
-        "cvv": 186,
-        "issuer": "COOPERATIVE EMPLOYEE'S C.U.",
-        "number": "4373147897184685",
-        "expiration": "2030-02-20T21:29:17.166Z",
+        "cvv": 798,
+        "issuer": "BANCO BILBAO VIZCAYA ARGENTARIA PARAGUAY, S.A.",
+        "id": "c5805305-62df-43d8-bdfd-ac72b459cc64",
+        "number": "4236228422790803",
+        "expiration": "05/2030",
         "brand": "visa",
-        "number_alt": "4373 1478 9718 4685"
+        "number_alt": {
+          "masked": "************0803",
+          "unmasked": "4236 2284 2279 0803",
+          "last4": "0803"
+        }
       },
       {
-        "cvv": 428,
-        "issuer": "SCOTIABANK DE COSTA RICA, S.A.",
-        "number": "4411783532951999",
-        "expiration": "2030-02-20T21:29:17.176Z",
+        "cvv": 284,
+        "issuer": "IDBI BANK, LTD.",
+        "id": "6a9d0686-6390-40d3-81a9-83cb7da1e1e1",
+        "number": "4581393917480061",
+        "expiration": "05/2030",
         "brand": "visa",
-        "number_alt": "4411 7835 3295 1999"
+        "number_alt": {
+          "masked": "************0061",
+          "unmasked": "4581 3939 1748 0061",
+          "last4": "0061"
+        }
       },
       {
-        "cvv": 389,
-        "issuer": "MBNA AMERICA BANK, N.A.",
-        "number": "4607118472526663",
-        "expiration": "2030-02-20T21:29:17.179Z",
+        "cvv": 184,
+        "issuer": "CREDIT SAISON CO., LTD.",
+        "id": "97e9a5cb-0bd1-46d5-b486-61caf7692155",
+        "number": "4541313270704781",
+        "expiration": "05/2030",
         "brand": "visa",
-        "number_alt": "4607 1184 7252 6663"
+        "number_alt": {
+          "masked": "************4781",
+          "unmasked": "4541 3132 7070 4781",
+          "last4": "4781"
+        }
       },
       {
-        "cvv": 751,
-        "issuer": "ING BANK (AUSTRALIA), LTD.",
-        "number": "4622635158951106",
-        "expiration": "2030-02-20T21:29:17.181Z",
+        "cvv": 649,
+        "issuer": "CARD SERVICES FOR CREDIT UNIONS, INC.",
+        "id": "013f5e59-5c1a-4c92-a2a7-171384de2416",
+        "number": "4148851836478785",
+        "expiration": "05/2030",
         "brand": "visa",
-        "number_alt": "4622 6351 5895 1106"
+        "number_alt": {
+          "masked": "************8785",
+          "unmasked": "4148 8518 3647 8785",
+          "last4": "8785"
+        }
       },
       {
-        "cvv": 600,
-        "issuer": "EVANSVILLE TEACHERS F.C.U.",
-        "number": "4690679884272137",
-        "expiration": "2030-02-20T21:29:17.184Z",
+        "cvv": 161,
+        "issuer": "JPMORGAN CHASE BANK, N.A.",
+        "id": "d4cf0704-7c48-4221-bcae-53c676261487",
+        "number": "4867963822584424",
+        "expiration": "05/2030",
         "brand": "visa",
-        "number_alt": "4690 6798 8427 2137"
+        "number_alt": {
+          "masked": "************4424",
+          "unmasked": "4867 9638 2258 4424",
+          "last4": "4424"
+        }
       }
     ],
     "owner": {
-      "name": "Hugo Batz",
+      "name": "Herman Gulgowski",
       "address": {
-        "street": "2335 Augusta Vista",
-        "city": "Zboncakside",
-        "state": "New Hampshire",
-        "zipCode": "11458"
+        "street": "3659 Konopelski Coves",
+        "city": "Schmittburgh",
+        "state": "Utah",
+        "zipCode": "01681-6561"
       }
     }
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -139,6 +215,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
@@ -152,7 +229,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2025 APIVerve, and Evlar LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
